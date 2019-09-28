@@ -1,0 +1,26 @@
+  If you face while running the application then drop all the tables which is created by  previous application as same tables are used with different 
+constraint so it may create the problem to srop and application may crash during startUp.
+
+SELECT
+  TABLE_NAME,
+  COLUMN_NAME,
+  CONSTRAINT_NAME,   -- <<-- the one you want! 
+  REFERENCED_TABLE_NAME,
+  REFERENCED_COLUMN_NAME
+FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE
+WHERE
+  REFERENCED_TABLE_NAME = 'person_details';
+  
+  
+  @ManyToMany mapping the hibernate will create new table as 1 vehicle used by many persons and 1 persons uses many vehicle.
+  In this condition we need to ManyToMany mapping.
+  
+  @ManyToMany() --> In this Hibernate will need to create the new table always.
+  
+  In ManyToMany mapping we need to have Collection of Vehicle in person class and collection of of person in Vehicle class.
+  
+  In ManyToMany mapping if we don't give mappedby in any of the Entity class then Hibernate will create the 2 new table 1 for person_details_vehicle and 
+  other as vehicle_person_details which is not gooed to we use mappedby to tell the Hibernate it needs to create only one table.
+  
+  In the annotation in which we have used mappedby tells the Hibernate not to do mapping and does not do mapping and also tells the name of the 
+  object who is doing the mapping 

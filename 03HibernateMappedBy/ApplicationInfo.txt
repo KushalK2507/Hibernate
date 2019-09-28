@@ -1,0 +1,23 @@
+As seen in the previous application when we use OneToMany and ManyToOne relationship  hibernates created the separate tables.
+So not to create the separate table we can use mappedBy inside OneToMany annotation a so HIbernate which create new Column in the entity class where 
+we have given the annotation @ManyToOne by giving the annotation @JoinColumn and mentioning the primary column of the Entity class in which in needs 
+to be mapped.
+
+If you face while running the application then drop all the tables which is created by  previous application as same tables are used with different 
+constraint so it may create the problem to srop and application may crash during startUp.
+
+SELECT
+  TABLE_NAME,
+  COLUMN_NAME,
+  CONSTRAINT_NAME,   -- <<-- the one you want! 
+  REFERENCED_TABLE_NAME,
+  REFERENCED_COLUMN_NAME
+FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE
+WHERE
+  REFERENCED_TABLE_NAME = 'person_details';
+  
+  This Query can be used to check which constraints are present.
+  
+  @NotFound(action=NotFoundAction.IGNORE) ---> In one vehicle is not by by any of the user then for that vehicle the value of the user will be  null.
+  as we have given Ignore so if user is null then it can be ignored but 
+  

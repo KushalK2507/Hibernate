@@ -1,0 +1,10 @@
+@OneToMany(mappedBy = "person") --> This will tell Hibernate not to create new table  but mapped this which the object which is given as person.
+This "person" will the name of the object where we used ManyToOne mapping.
+
+@ManyToOne
+@JoinColumn(name ="person_id") --> THis used to create the new column in person_Vehicle table i.e. Vehicle entity class and this be mapped by the 
+person_details table.
+
+@NotFound(action=NotFoundAction.IGNORE) --> It used to suppress the Exception if the value of the object is null and we are using getter of the object to get the value in our code.
+@NotFound(action=NotFoundAction.IGNORE) --> This is the Hibernate specific annotation and does not belong to JPA.
+
