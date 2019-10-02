@@ -26,8 +26,7 @@ public class Users {
 	@Column(name = "user_id")
 	int userId;
 
-	@Column(name = "username") // This is optional as the name of the column and data member are exactly the
-								// same
+	@Column(name = "username") // This is optional as the name of the column and data member are exactly the same
 	String username;
 
 	@Column(name = "email")
