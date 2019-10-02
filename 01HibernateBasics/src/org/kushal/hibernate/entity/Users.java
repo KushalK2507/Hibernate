@@ -43,7 +43,7 @@ public class Users {
 			@AttributeOverride(name = "state", column = @Column(name = "Company_state")) })
 	private Address companyAddress;
 
-	@ElementCollection(fetch=FetchType.EAGER) // Name of the table will be users_listAddress
+	@ElementCollection(fetch = FetchType.EAGER) // Name of the table will be users_listAddress
 	@JoinTable(name = "user_address", joinColumns = @JoinColumn(name = "user_id"))
 	private Set<Address> listAddress = new HashSet<>();
 

@@ -23,7 +23,7 @@
 		 <property name="hibernate.id.new_generator_mappings">false</property>
 		 
 		 <!-- By this table will be created if doesn't exist -->
-		 <property name="hibernate.hbm2ddl.auto">update</property>
+		 <property name="hibernate.hbm2ddl.auto">create</property>
  
     </session-factory>
 </hibernate-configuration>

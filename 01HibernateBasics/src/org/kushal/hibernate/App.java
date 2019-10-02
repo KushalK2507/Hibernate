@@ -45,7 +45,7 @@ public class App {
 					String city = sc.nextLine();
 					System.out.println("Enter the pincode");
 					String pincode = sc.nextLine();
-					Address homeAddress= new Address();
+					Address homeAddress = new Address();
 					homeAddress.setCity(city);
 					homeAddress.setState(state);
 					homeAddress.setStreet(street);
@@ -59,21 +59,21 @@ public class App {
 					String city1 = sc.nextLine();
 					System.out.println("Enter the pincode");
 					String pincode1 = sc.nextLine();
-					Address companyAddress= new Address();
+					Address companyAddress = new Address();
 					companyAddress.setCity(city1);
 					companyAddress.setState(state1);
 					companyAddress.setStreet(street1);
 					companyAddress.setPincode(pincode1);
 					// Adding Simple Home Address
 					insertUser.setAddress(homeAddress);
-					
+
 					// Adding Simple Company Address which is newly created in Users class
 					insertUser.setCompanyAddress(companyAddress);
-					
+
 					// Inserting the List of Address that 1User can have
 					insertUser.getListAddress().add(companyAddress);
 					insertUser.getListAddress().add(homeAddress);
-					
+
 					session.save(insertUser);
 					System.out.println("Row Added");
 					break;
