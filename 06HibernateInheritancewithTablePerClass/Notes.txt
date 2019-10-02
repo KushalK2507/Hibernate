@@ -1,0 +1,9 @@
+Now in this we change the strategy as Table per class strategy i.e every entity class has its own table.
+In Vehicle class we give the Inhertiance strategy as Table per class.
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS) --> This strategy is given in the parent class of base class as which shows every child class
+has its own table
+
+When using @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS) we need to make sure the primary key Generation we are using is GenerationType.TABLE
+else it will mappingExpection in application start Up.
+
+In this all the child tables i.e. 2wheeler and 4Wheeler table will have all the fields that are present in parent class.
