@@ -1,0 +1,4 @@
+In HQL instead of passing the table name we pass class name OR the name of the object mentioned in @Entity annotation.
+In HQL using the where clause we give the name of dataType instead of giving the name of column name.
+
+So Basically in HQL instead dealing with tabe_name and column_name we use class name the properties i.e. it member variable name. 

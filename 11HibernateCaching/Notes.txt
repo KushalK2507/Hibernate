@@ -1,0 +1,26 @@
+There are multiple class which provides the 2nd level of cache like  EhCacheProvider, OsCacheProvider
+We can implement any of these.
+To enable the 2nd level of cache below tag is present in config.xml
+<!-- This for enabling the 2nd level of Cache -->
+<property name="cache.use_second_level_cache">true</property>
+<property name="cache.provider_class">org.hibernate.cache.EhCacheProvider</property>
+
+<property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
+The EhCache is now depricated cannot be used after hibernate 4.0 we need to use this Cache
+
+We also need get the EhCache jar form EhCache.org and add it in build Path
+For this EhCacheRegionFactory class we need to download the jar hibernate-ehcache-5.2.2.Final
+
+After this we also need to tell hibernate for which all entities we need to enable the 2nd level of cahce.
+This can be done by using the annotation
+
+@Cacheable --> This is given on class level annotation below entity annotation. It tells hibernate that entity is cachable
+@Cache(usage=CacheConcurrencyStrategy.READ_WRITE) --> This is Hibernate specific. Read_write means that read and write 
+can handle on this data
+
+To enable the 2nd level Query Cache, i.e when using the HQL query then we need to enable the 2nd level caache then we need
+to do it by below cache tag in config.xml
+<property name="cache.use_query_cache">true</property>
+After this we also need to set the query as cachable.
+query.setCachable(true);
+The above needs to be done in all the query object which needs to cached 
