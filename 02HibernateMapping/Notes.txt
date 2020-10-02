@@ -1,4 +1,4 @@
-@OneToOne --> This annotation is used to the one to one mapping. Thia annotation is given the DataMember 
+@OneToOne --> This annotation is used to the one to one mapping. This annotation is given the DataMember 
 Object inside the entity class present who is the object of another Entity class
 @JoinColumn(name="House_number") --> This is the use give the name of the column which is used for oneToone mapping
 
