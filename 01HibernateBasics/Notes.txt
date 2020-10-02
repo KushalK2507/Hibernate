@@ -7,6 +7,8 @@ Steps
 5. Copy all these jar copy the these jar in lib folder of the Project.
 6. Now Configure the build path. Going Build Path libraries section and add jar button and add these jars.
 
+XML file is used to configure the properties of Hibernate we need to use.
+
 Various tags in XML file and their significance.
 
 Connection.driver_class --> As we are using MySQL we are setting upp to com.mysql.jdbc.Driver
