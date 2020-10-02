@@ -6,6 +6,7 @@ which needs to be used in HQL Query.
 @Transient() --> This tells hibernate that this field needs not to be saved in DB.
 @Temporal(TemporalType.Date) --> This annotation present on Date field tells the Hibernate to save 
 the date by ignoring the timestamp.
+
 @Lob() --> This tells Hibernate that any column not to take as Default varchar of 255 as this field 
 can have large no of character.
 @Embeddable() --> this annotation tells this does have stand alone meaning but goes inside the other entity class.

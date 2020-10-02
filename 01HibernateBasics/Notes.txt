@@ -9,6 +9,7 @@ Steps
 
 XML file is used to configure the properties of Hibernate we need to use.
 
+
 Various tags in XML file and their significance.
 
 Connection.driver_class --> As we are using MySQL we are setting upp to com.mysql.jdbc.Driver
