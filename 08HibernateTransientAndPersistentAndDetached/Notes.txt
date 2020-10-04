@@ -1,9 +1,10 @@
-Afterr the object is created and values are set on the object but that object is not saved in DB by using save method till that time Object is known as
-Transient Object.
+Afterr the object is created and values are set on the object but that object is 
+not saved in DB by using save method till that time Object is known as Transient Object.
 
 
 
-Persistent Object --> After the object is saved and session is not closed, at that time all the changes made on the Object will be tracked by Hibernate
-and would be updated in the DB.
+Persistent Object --> After the object is saved and session is not closed, 
+at that time all the changes made on the Object will be tracked by Hibernate and would be updated in the DB.
 
-Detached Object --> After the session is closed, after that any change on that object eill not be saved in DB and object is created as detached Object.
+Detached Object --> After the session is closed, after that any change on that object will
+ not be saved in DB and object is created as detached Object.

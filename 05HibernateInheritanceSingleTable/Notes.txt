@@ -1,19 +1,25 @@
-By default Hibernate add the column of in 1 table that is defined in Parent Class in INheritance, even though we have defined the sub class with annotation
-as @Entity then also hibernate add the fields in the sub-class entity as the column of parent entity class.
+By default Hibernate add the column of in 1 table that is defined in Parent Class in INheritance,
+even though we have defined the sub class with annotation as @Entity then also hibernate add the fields 
+in the sub-class entity as the column of parent entity class.
 
 Firstly we have created the TwoWheeler class and FourWheeler class which both is marked by @Entity and extends Vehicle class.
-So by when we start the application hibernate will not create the new table for these separate entities rather than it will add the column to base class
-entity i.e. in Vehicle table 2 new columns will be created which is defines in child class of Vehicle.
-HIbernate also creates 1more column which is called as DTYPE(Discriminator Type) which stores which type of value stored in that row i.e. TwoWheeler OR FourWheeler.
+So by when we start the application hibernate will not create the new table for these separate entities rather 
+than it will add the column to base class entity i.e. 
+in Vehicle table 2 new columns will be created which is defines in child class of Vehicle.
+HIbernate also creates 1more column which is called as DTYPE(Discriminator Type) which stores
+ which type of value stored in that row i.e. TwoWheeler OR FourWheeler.
 
-This is known as single table strategy. and by default the parent class OR base class HIbernate assume the annotation as @Inheritance.
+This is known as single table strategy.
+ and by default the parent class OR base class HIbernate assume the annotation as @Inheritance.
 @Inheritance(strategy=InheritanceType.SINGLE_TABLE) --> This annotation is not mandatory and bydefault Hibernate will create the single table with both the column is that table. The table
 created is of parent class.
 
-To give the name of the column of DTYPE we use annotation as @DiscriminatorColumn(name = "Vehicle_type", discriminatorType = DiscriminatorType.STRING)
+To give the name of the column of DTYPE we use annotation as 
+@DiscriminatorColumn(name = "Vehicle_type", discriminatorType = DiscriminatorType.STRING)
 but default the name of this column is name of the class. 
 
-In the child class we can give the value of Discriminator Type by using the annottation as @DiscriminatorValue("2Wheeler") these values will be stored in
-the Column of DTYPE. So when the value stored in any row will be the object of TwoWheeler then the value in DTYPE column will be 2Wheeler.
+In the child class we can give the value of Discriminator Type by using the annottation as @DiscriminatorValue("2Wheeler") 
+these values will be stored in the Column of DTYPE. 
+So when the value stored in any row will be the object of TwoWheeler then the value in DTYPE column will be 2Wheeler.
 
 Discriminator Column is used discriminate the the different objects stored in the table.

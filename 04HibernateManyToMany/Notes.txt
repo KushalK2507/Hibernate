@@ -19,8 +19,9 @@ WHERE
   
   In ManyToMany mapping we need to have Collection of Vehicle in person class and collection of of person in Vehicle class.
   
-  In ManyToMany mapping if we don't give mappedby in any of the Entity class then Hibernate will create the 2 new table 1 for person_details_vehicle and 
-  other as vehicle_person_details which is not gooed to we use mappedby to tell the Hibernate it needs to create only one table.
+  In ManyToMany mapping if we don't give mappedby in any of the Entity class then Hibernate will create the 2 new table 
+  1 for person_details_vehicle and other as vehicle_person_details which is not 
+  good to we use mappedby to tell the Hibernate it needs to create only one table.
   
-  In the annotation in which we have used mappedby tells the Hibernate not to do mapping and does not do mapping and also tells the name of the 
-  object who is doing the mapping 
+  In the annotation in which we have used mappedby tells the Hibernate not to do mapping and does not do mapping 
+  and also tells the name of the object who is doing the mapping 
