@@ -10,7 +10,8 @@ SQL didn't know which type of object is returned use session.getNativeQuery("nam
 to fetch the details
 
 Now we will consider the Criteria API to fetch the records.
-Criteria criteria = session.createCriteria(Users.class); // In this we set the entity class from which we need to fetch the data
+Criteria criteria = session.createCriteria(Users.class); // In this we set the entity class from which we need to 
+fetch the data
 
 criteria.add(Restrictions.eq("username", "User2"))
 				.add(Restrictions.gt("userId", 5));
@@ -26,7 +27,8 @@ like --> like
 ge --> greater than equal to
 		List<Users> user5 = criteria.list();
 		
-We can also use "or" in Restriction by default if we just add the Restriction then it will consider it and and add the restriction.
+We can also use "or" in Restriction by default if we just add the Restriction then it will consider it and 
+and add the restriction.
 Restriction.or(Restriction.between("userID","low","high").Restriction.between("userId","low","high"))
 
 To get the max userId Or maximum we use Projections.
@@ -64,8 +66,8 @@ Order.asc("") --> to sort in ascending Order
 	
  we can set only the properties in User class which we want Hibernate to consider.
  We can also create the example to exclude any property i.e. not to consider that column.
- Example example = Example.create(userdetails).excludeProperty("proeprtyName");.// Her Property name means the name of the column
- i.e. the name of the dataType present in the entity class.
+ Example example = Example.create(userdetails).excludeProperty("proeprtyName");.// Her PropertyName
+  means the name of the column i.e. the name of the dataType present in the entity class.
  
  We can also enable the like in Query by Example as below
  userdetails.setuserName("User 2%");
