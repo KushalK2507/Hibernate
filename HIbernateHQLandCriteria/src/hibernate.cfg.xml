@@ -4,10 +4,10 @@
 		<property name="connection.driver_class">oracle.jdbc.OracleDriver</property>
 		<property name="dialect">org.hibernate.dialect.Oracle10gDialect
 		</property>
-		<property name="connection.url">jdbc:oracle:thin:@indlnqw631:1521:VIVDB330
+		<property name="connection.url">
 		</property>
-		<property name="connection.user">OMS1OMS</property>
-		<property name="connection.password">OMS1OMS</property>
+		<property name="connection.user"></property>
+		<property name="connection.password"></property>
 
 		<property name="current_session_context_class">thread</property>
 
