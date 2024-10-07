@@ -1,0 +1,29 @@
+@OneToOne --> This annotation is used to the one to one mapping. This annotation is given the DataMember 
+Object inside the entity class present who is the object of another Entity class
+@JoinColumn(name="House_number") --> This is the use give the name of the column which is used for oneToone mapping
+
+@OneToMany
+	@JoinTable(name = "person_vehicle",
+				joinColumns=@JoinColumn(name="person_id"),
+				inverseJoinColumns =@JoinColumn(name="vehicle_id")
+			)
+This is given on the DataMember inside the Entity which has the Collection of of other entity
+In This OneToMany mapping Hibernate will create new table which name as person_Vehicle which has 2 columns person_id and vehicleId
+and there would ManyToOne mapping i.e. Many Vehicle will have one user.
+
+@ManyToOne
+This is given in the Entity class in which would have many Vehicles associated to one person.
+In our case Inside the Vehicle class one person will have multiple vehicle
+
+@OneToOne
+	@JoinColumns({
+		@JoinColumn(name="Offer_id"),
+		@JoinColumn(name="Price_plan")
+	})
+	private OfferDetails offerDetails;
+	
+The above is used when we have composite Key present.
+In above we have 1 table offer_details which composite key of offer_id and price_plan
+So to define it as forigen key in other table we need above synatx and by this other table have both column present as 
+offer_id and price_plan.
+ 

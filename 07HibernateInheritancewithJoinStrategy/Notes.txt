@@ -1,5 +1,0 @@
-In this we just have to change the startegy as JOINED as below in Vehicle class
-@Inheritance(strategy = InheritanceType.JOINED)
-
-In this Hibernate creates the 3 table
-and in the child table to creates only 2 column 1 column as Vehicle_id and 2nd as the column belongs that entity class.

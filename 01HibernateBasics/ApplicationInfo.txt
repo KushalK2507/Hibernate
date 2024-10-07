@@ -1,8 +1,0 @@
-In this we have created the User as entity class and saved the user details in DB.
-We have created the Address class as Value Object which which does not have significance of its own 
-but present inside the User Entity class and stores the Address of the user.
-
-When we give @ElementCollection then Hibernate create the new table whose name will the name of entity 
-class_datamemberName.
-In this the userId will be created in which will be foriegn Key in users_listAddress table.
- the foriegn will be associated with primary KKey of the users table.

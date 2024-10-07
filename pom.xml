@@ -8,18 +8,18 @@
 
 
     <modules>
-        <module>hibernate-basics</module>
-        <module>hibernate-mapping</module>
-        <module>hibernate-mapped-by</module>
-        <module>hibernate-many-to-many</module>
-        <module>hibernate-inheritance-single-table</module>
-        <module>hibernate-inheritance-table-per-class</module>
-        <module>hibernate-inheritance-join-strategy</module>
-        <module>hibernate-object-states</module>
-        <module>hibernate-hql</module>
-        <module>hibernate-named-query-projections</module>
-        <module>hibernate-caching</module>
-        <module>hibernate-hql-criteria</module>
+        <module>01-hibernate-basics</module>
+        <module>02-hibernate-mapping</module>
+        <module>03-hibernate-mapped-by</module>
+        <module>04-hibernate-many-to-many</module>
+        <module>05-hibernate-inheritance-single-table</module>
+        <module>06-hibernate-inheritance-table-per-class</module>
+        <module>07-hibernate-inheritance-join-strategy</module>
+        <module>08-hibernate-object-states</module>
+        <module>09-hibernate-hql</module>
+        <module>10-hibernate-named-query-projections</module>
+        <module>11-hibernate-caching</module>
+        <module>12-hibernate-hql-criteria</module>
 
     </modules>
 

@@ -1,0 +1,2 @@
+In this it contains all the example of HQL and Criteria NamedQuery and NamedNativeQuery 
+and Projections Resrictions and QuerByExample
