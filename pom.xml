@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.kushal.hibernate</groupId>
+    <artifactId>hibernate</artifactId>
+    <version>1.0-snapshot</version>
+    <packaging>pom</packaging>
+
+
+    <modules>
+        <module>hibernate-basics</module>
+        <module>hibernate-mapping</module>
+        <module>hibernate-mapped-by</module>
+        <module>hibernate-many-to-many</module>
+        <module>hibernate-inheritance-single-table</module>
+        <module>hibernate-inheritance-table-per-class</module>
+        <module>hibernate-inheritance-join-strategy</module>
+        <module>hibernate-object-states</module>
+        <module>hibernate-hql</module>
+        <module>hibernate-named-query-projections</module>
+        <module>hibernate-caching</module>
+        <module>hibernate-hql-criteria</module>
+
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>6.6.1.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.28</version>
+        </dependency>
+    </dependencies>
+
+</project>
