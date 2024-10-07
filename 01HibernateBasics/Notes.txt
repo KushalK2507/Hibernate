@@ -1,7 +1,7 @@
 In this project we will set Up Hibernate dependency.
 Steps
 1. Create the new folder of lib.
-2. Now go to hibernate.org and go to Hibernate ORM section and doenload the zip file.
+2. Now go to hibernate.org and go to Hibernate ORM section and download the zip file.
 3. Copy my SQl Connector jar from MySQL folder in C:/ProgramFiles/MySQL.
 4.  Unzip the zipped file of Hibernate and copy the required folder in lib section.
 5. Copy all these jar copy the these jar in lib folder of the Project.
