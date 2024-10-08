@@ -4,7 +4,7 @@ we have given the annotation @ManyToOne by giving the annotation @JoinColumn and
 to be mapped.
 
 If you face while running the application then drop all the tables which is created by  previous application as same tables are used with different 
-constraint so it may create the problem to srop and application may crash during startUp.
+constraint so it may create the problem to drop and application may crash during startUp.
 
 SELECT
   TABLE_NAME,
@@ -18,6 +18,6 @@ WHERE
   
   This Query can be used to check which constraints are present.
   
-  @NotFound(action=NotFoundAction.IGNORE) ---> In one vehicle is not by by any of the user then for that vehicle the value of the user will be  null.
+  @NotFound(action=NotFoundAction.IGNORE) ---> In one vehicle is not by any of the user then for that vehicle the value of the user will be  null.
   as we have given Ignore so if user is null then it can be ignored but 
   

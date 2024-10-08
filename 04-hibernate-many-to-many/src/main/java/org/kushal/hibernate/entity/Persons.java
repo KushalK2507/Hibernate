@@ -24,8 +24,10 @@ public class Persons {
   private String name;
 
   @ManyToMany
-  @JoinTable(name = "Persons_vehicles")
-  @JoinColumn(name = "Vehicle_id")
+  @JoinTable(name = "Persons_vehicles",
+          joinColumns = @JoinColumn(name = "Person_id"),
+          inverseJoinColumns =
+  @JoinColumn(name = "Vehicle_id"))
   private Collection<Vehicle> vehicle = new ArrayList<>();
 
   public Collection<Vehicle> getVehicle() {

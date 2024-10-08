@@ -9,11 +9,11 @@ the date by ignoring the timestamp.
 
 @Lob() --> This tells Hibernate that any column not to take as Default varchar of 255 as this field 
 can have large no of character.
-@Embeddable() --> this annotation tells this does have stand alone meaning but goes inside the other entity class.
+@Embeddable() --> This annotation tells this does have standalone meaning but goes inside the other entity class.
 @Embeded() --> We need to mark the object as Embeded for the Value Object class mark 
 as Embeddable inside the Entity class it is present.
 @AttributeOverride() --> This is used override the default column given in the Value Object (Embedable Object).
-@AttributeOverrides() --> This is used as a parent of Attributeoveride and it contains multiple Attribute Override which overrides the each colmn name.
+@AttributeOverrides() --> This is used as a parent of AttributeOverride and it contains multiple Attribute Override which overrides the each colmn name.
 @EmbeddedId() --> This is used for the using the Embeddable Object as primary Key. 
 In this case we cannot use @Id and @GeneratedValue in Embedded Object.
 @ElementCollection() --> By this Hibernate know that Address needs to be the separate table

@@ -12,7 +12,7 @@ save the transient instance before flushing: org.kushal.hibernate.entity.House".
 If we don't use the mappedby Annotation then by default running this application will create the 5 tables.
 1. Person_details --> This is created by entity class Persons.
 2. Person_house --> This is created by entity class House.
-3. Peron_Vehicle --> This is created by oneToMany Annotation in Person class which means 1 person can be many vehicles.
+3. Person_Vehicle --> This is created by oneToMany Annotation in Person class which means 1 person can be many vehicles.
 4. Person_vehicles --> This is created by entity class Vehicle.
 5. Vehicles_person --> This is created by ManyToOne annotation in Vehicles class this means 1 Vehices own by many persons.
 
