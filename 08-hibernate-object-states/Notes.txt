@@ -1,4 +1,4 @@
-Afterr the object is created and values are set on the object but that object is 
+After the object is created and values are set on the object but that object is
 not saved in DB by using save method till that time Object is known as Transient Object.
 
 
